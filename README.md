@@ -1,6 +1,7 @@
 # Brainpress
 
 - BrainPress is a simple NextJS app to self-publish Obsidian vaults. It supports the new canvas files.
+- [See Demo](https://canvas-viewer.vercel.app/)
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
