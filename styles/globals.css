@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.react-flow__controls {
+    bottom: 50px !important;
+}
+
+.react-flow__node-file {
+    font-size: 12px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.react-flow__node-markdown {
+    font-size: 12px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.react-flow__node-link {
+    font-size: 12px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.react-flow__node-link a, .react-flow__node-markdown a, .react-flow__node-file a {
+    text-decoration: underline;
+}

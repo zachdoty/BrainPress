@@ -1,0 +1,9 @@
+{
+	"nodes":[
+		{"id":"64ac0fd23176ef0d","x":-397,"y":17,"width":334,"height":160,"type":"text","text":"testing  a [[Devs Test]] and testing again [[This is a new note]]"},
+		{"id":"4328271d73c0a948","x":43,"y":177,"width":250,"height":60,"type":"text","text":"testing  [[test ai.canvas]]"}
+	],
+	"edges":[
+		{"id":"48425346bf770c6f","fromNode":"64ac0fd23176ef0d","fromSide":"bottom","toNode":"4328271d73c0a948","toSide":"top"}
+	]
+}
