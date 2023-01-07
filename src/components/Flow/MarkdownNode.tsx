@@ -3,7 +3,6 @@ import { Handle, Position } from "reactflow";
 import ReactMarkdown from 'react-markdown'
 
 const MarkdownNode: FC<any> = memo(({ data, isConnectable }: any) => {
-    console.log(data, 'data')
     return (
         <>
             <Handle

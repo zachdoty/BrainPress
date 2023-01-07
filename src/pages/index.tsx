@@ -6,7 +6,7 @@ import Flow from "../components/Flow";
 import NavBar from "../components/NavBar";
 
 export default function Home() {
-    const { data, error } = useSWR("/api/canvas", fetcher);
+    const { data, error, isLoading } = useSWR("/api/canvas", fetcher);
 
     return (
         <div>
@@ -21,8 +21,8 @@ export default function Home() {
             </Head>
             <NavBar title={data?.active} />
             <main className="h-screen">
-                {error && <div>Failed to load</div>}
-                {!data && <div>Loading...</div>}
+                {error && !isLoading && <div>Failed to load</div>}
+                {isLoading && <div>Loading...</div>}
                 {data && <Flow data={data.data} />}
             </main>
         </div>

@@ -16,8 +16,6 @@ export default async function handler(
 
     let data = null;
 
-    console.log(mdFiles);
-
     if (mdFiles.length > 0) data = await fs.readFile(mdFiles[0], "utf8");
 
     res.status(200).json({

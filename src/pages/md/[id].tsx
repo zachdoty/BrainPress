@@ -9,7 +9,7 @@ import NavBar from "../../components/NavBar";
 export default function MD() {
     const { query } = useRouter();
     const { id } = query;
-    const { data, error } = useSWR(`/api/md/${id}`, fetcher);
+    const { data, error, isLoading } = useSWR(`/api/md/${id}`, fetcher);
 
     return (
         <div>
@@ -24,8 +24,8 @@ export default function MD() {
             </Head>
             <NavBar title={data?.active} />
             <main className="h-screen">
-                {error && <div>Failed to load</div>}
-                {!data && <div>Loading...</div>}
+                {error && !isLoading && <div>Failed to load</div>}
+                {isLoading && <div>Loading...</div>}
                 {data && (
                     <div className="p-12">
                         <ReactMarkdown>{data.data}</ReactMarkdown>
