@@ -28,6 +28,7 @@ const Flow: FC<FlowProps> = ({ data }) => {
                     nodeTypes={nodeTypes}
                     nodes={nodes}
                     edges={edges}
+                    connectionMode="loose"
                 >
                     <Controls />
                 </ReactFlow>

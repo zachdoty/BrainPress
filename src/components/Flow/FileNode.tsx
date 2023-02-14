@@ -19,10 +19,10 @@ const FileNode: FC<any> = memo(({ data, isConnectable }: any) => {
     return (
         <>
             <Handle
+                id="left"
                 type="target"
                 position={Position.Left}
                 style={{ background: "#555" }}
-                onConnect={(params) => console.log("handle onConnect", params)}
                 isConnectable={isConnectable}
             />
             {type === "image" && (
@@ -47,16 +47,23 @@ const FileNode: FC<any> = memo(({ data, isConnectable }: any) => {
                 />
             )}
             <Handle
+                id="top"
                 type="source"
                 position={Position.Top}
-                id="a"
                 style={{ top: 10, background: "#555" }}
                 isConnectable={isConnectable}
             />
             <Handle
+                id="right"
                 type="source"
                 position={Position.Right}
-                id="b"
+                style={{ background: "#555" }}
+                isConnectable={isConnectable}
+            />
+            <Handle
+                id="bottom"
+                type="source"
+                position={Position.Bottom}
                 style={{ bottom: 10, top: "auto", background: "#555" }}
                 isConnectable={isConnectable}
             />
