@@ -6,7 +6,8 @@ const MarkdownNode: FC<any> = memo(({ data, isConnectable }: any) => {
     return (
         <>
             <Handle
-                type="target"
+                id="left"
+                type="source"
                 position={Position.Left}
                 style={{ background: "#555" }}
                 onConnect={(params) => console.log("handle onConnect", params)}
@@ -14,16 +15,23 @@ const MarkdownNode: FC<any> = memo(({ data, isConnectable }: any) => {
             />
             <ReactMarkdown>{data.text}</ReactMarkdown>
             <Handle
+                id="top"
                 type="source"
                 position={Position.Top}
-                id="a"
                 style={{ top: 10, background: "#555" }}
                 isConnectable={isConnectable}
             />
             <Handle
+                id="right"
                 type="source"
                 position={Position.Right}
-                id="b"
+                style={{ background: "#555" }}
+                isConnectable={isConnectable}
+            />
+            <Handle
+                id="bottom"
+                type="source"
+                position={Position.Bottom}
                 style={{ bottom: 10, top: "auto", background: "#555" }}
                 isConnectable={isConnectable}
             />

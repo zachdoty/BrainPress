@@ -86,7 +86,9 @@ export const parseData = (data: {
             return {
                 id: edge.id,
                 source: edge.fromNode,
+                sourceHandle: edge.fromSide,
                 target: edge.toNode,
+                targetHandle: edge.toSide,
             };
         });
         res = { nodes, edges };
